@@ -1,7 +1,12 @@
-import './App.css'
+import List from './components/list/List'
+import Apollo from './store/Apollo'
 
 function App() {
-  return null
+  return (
+    <Apollo>
+      <List />
+    </Apollo>
+  )
 }
 
 export default App

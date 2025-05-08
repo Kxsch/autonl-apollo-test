@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@apollo/client": "^3.13.8",
+    "apollo-link-rest": "^0.9.0",
+    "graphql": "^16.11.0",
+    "qs": "^6.14.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
