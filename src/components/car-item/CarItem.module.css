@@ -1,4 +1,6 @@
 .carItem {
   border: 1px solid currentColor;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   padding: .5em .75em;
 }
