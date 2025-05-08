@@ -3,17 +3,20 @@ import { useMemo } from 'react'
 
 import type { Car } from '../../types/Car'
 
-const useGetCarsQueryKey = () => {
-  return useMemo(() => ['cars'], [])
+const ITEMS_PER_PAGE = 10
+
+const useGetCarsQueryKey = (page: number) => {
+  return useMemo(() => ['cars', page], [page])
 }
 
-const useGetCars = () => {
-  const queryKey = useGetCarsQueryKey()
+const useGetCars = (page: number) => {
+  const queryKey = useGetCarsQueryKey(page)
+  const skip = ITEMS_PER_PAGE * page
 
   return useQuery<Car[]>({
     queryKey,
     queryFn: async () => {
-      const response = await fetch('https://whitelabel.auto.nl/stock/cars?ownerid=toyota&projection=all&skip=0&limit=10')
+      const response = await fetch(`https://whitelabel.auto.nl/stock/cars?ownerid=toyota&projection=all&skip=${skip}&limit=${ITEMS_PER_PAGE}`)
       return response.json()
     }
   })

@@ -6,3 +6,18 @@
   margin: 0;
   padding: 0;
 }
+
+.buttons {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  gap: .5em;
+  margin-block: .5em;
+
+  button {
+    all: revert;
+    background: none;
+    border: 1px solid currentColor;
+    padding: .5em .75em;
+  }
+}
