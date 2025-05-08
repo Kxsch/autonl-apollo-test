@@ -1,11 +1,14 @@
-import List from './components/list/List'
-import Apollo from './store/Apollo'
+import Body from './components/body/Body'
+import CarList from './components/car-list/CarList'
+import StoreClient from './store/Client'
 
 function App() {
   return (
-    <Apollo>
-      <List />
-    </Apollo>
+    <Body>
+      <StoreClient>
+        <CarList />
+      </StoreClient>
+    </Body>
   )
 }
 

@@ -1,0 +1,8 @@
+.carList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .5em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
